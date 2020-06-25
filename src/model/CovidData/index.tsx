@@ -16,6 +16,7 @@ export interface ICovidOccupation {
 export interface ICovidTracker {
     covidData: ICovidGroup;
 }
+
 export interface ICovidTrackerItem extends ICovidTracker {
     overview?: boolean;
 }
@@ -31,4 +32,17 @@ export interface ITrackerQuantity {
 
 export interface IHomeBanner {
     date: string;
+}
+
+export interface ICovidCategoriesDescription {
+    covidData: ICovidGroup;
+}
+
+export interface ICategoryDescriptionGroup{
+    covidData: ICovidGroup;
+    overview?: boolean;
+}
+
+export interface ICategoryDescriptionWrapper {
+    color: string;
 }

@@ -7,6 +7,7 @@ export const CovidTrackerContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     margin: auto;
+    margin-bottom: 2rem;
     @media (min-width: 992px){
         max-width: initial;
         flex-direction: row;
