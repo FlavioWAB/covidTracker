@@ -70,7 +70,8 @@ const Home: React.FC = () => {
                 description: 'lorem',
                 color: '#2D673F',
             }
-        ]
+        ],
+        lastUpdated: '01/01/1970'
     };
 
     const [covidData,setCovidData] = useState<ICovidGroup>(covidDataPlaceholder);
@@ -78,7 +79,7 @@ const Home: React.FC = () => {
     return (
         <HomeContainer>
             <GlobalStyle />
-            <HomeBanner />
+            <HomeBanner date={covidData.lastUpdated}/>
             <CovidTracker covidData={covidData} />
             <CovidOccupation percentage={21}/>
         </HomeContainer>
