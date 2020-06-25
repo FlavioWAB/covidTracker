@@ -10,6 +10,7 @@ export default createGlobalStyle`
 
   body {
     -webkit-font-smoothing: antialiased;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
   }
 
   button {

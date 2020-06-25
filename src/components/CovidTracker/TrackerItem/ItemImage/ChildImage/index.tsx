@@ -4,7 +4,7 @@ import { IItemImage } from '../../../../../model/CovidData';
 const ChildImage: React.FC<IItemImage> = ({ color }) => {
     return (
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-            width="145.000000pt" height="183.000000pt" viewBox="0 0 145.000000 183.000000"
+            width="150px" height="150px" viewBox="0 0 145.000000 183.000000"
             preserveAspectRatio="xMidYMid meet">
             <g transform="translate(0.000000,183.000000) scale(0.100000,-0.100000)" fill={color} stroke="none">
                 <path d="M775 1701 c-75 -45 -108 -124 -85 -198 32 -100 139 -150 233 -109 74 32 119 125 97 205 -10 37 -55 89 -97 110 -34 17 -114 13 -148 -8z"/>

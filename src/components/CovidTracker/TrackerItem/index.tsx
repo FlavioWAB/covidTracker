@@ -1,22 +1,23 @@
 import React from 'react';
-import { ICovidTracker } from '../../../model/CovidData';
+import { ICovidTrackerItem } from '../../../model/CovidData';
 import {
     TrackerItemContainer,
     ItemOverview,
     ItemLabel,
-    ItemQuantity,
-    ItemArrowContainer
+    ItemQuantity
 } from './styles'
 import ItemImage from './ItemImage';
+import ItemArrow from './ItemArrow';
 
-const TrackerItem: React.FC<ICovidTracker> = ({ covidData }) => {
+const TrackerItem: React.FC<ICovidTrackerItem> = ({ covidData, overview }) => {
     return (
         <TrackerItemContainer>
-            <ItemArrowContainer />
+            <ItemArrow />
             <ItemOverview>
-                <ItemImage color={covidData.color}/>
+                <ItemImage color={covidData.color} overview={overview}/>
                 <ItemLabel>{covidData.label}</ItemLabel>
-                <ItemQuantity>{covidData.quantity}</ItemQuantity>
+                <ItemQuantity color={covidData.color}>{covidData.quantity}</ItemQuantity>
+                {!overview && covidData.children ? covidData.children.map(covidChildren => <TrackerItem covidData={covidChildren} /> ): null}
             </ItemOverview>
         </TrackerItemContainer>
     )

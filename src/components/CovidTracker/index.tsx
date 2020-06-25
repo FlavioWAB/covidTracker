@@ -6,7 +6,7 @@ import TrackerItem from './TrackerItem';
 const CovidTracker: React.FC<ICovidTracker> = ({ covidData }) => {
     return (
         <CovidTrackerContainer>
-            <TrackerItem covidData={covidData} />
+            <TrackerItem covidData={covidData} overview />
             {covidData.children.map(covidChild => <TrackerItem covidData={covidChild} />)}
         </CovidTrackerContainer>
     )

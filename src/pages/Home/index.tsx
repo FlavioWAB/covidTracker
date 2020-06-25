@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { ICovidGroup } from '../../model/CovidData';
 import GlobalStyle from '../../styles/global';
-import { HomeContainer } from './styles';
+import { 
+    HomeContainer,
+    TrackerWrapper
+} from './styles';
 import HomeBanner from '../../components/HomeBanner';
 import CovidTracker from '../../components/CovidTracker';
 import CovidOccupation from '../../components/CovidOccupation';
@@ -17,22 +20,24 @@ const Home: React.FC = () => {
             {
                 label: 'Notificados que no inínio da pandemia não fizeram exames',
                 quantity: 193,
-                description: 'lorem',
                 color: '#6E6FB0',
+                description: 'lorem'
             },{
                 label: 'Suspeitos aguardando resultado dos exames',
                 quantity: 168,
-                description: 'lorem',
                 color: '#D28D30',
+                description: 'lorem',
                 children: [
                     {
                         label: 'Internados',
                         quantity: 4,
-                        description: 'lorem',
+                        color: '#D28D30',
+                        description: 'lorem'
                     },{
                         label: 'Óbitos em investigação',
                         quantity: 2,
-                        description: 'lorem',
+                        color: '#D28D30',
+                        description: 'lorem'
                     },
                 ]
             },{
@@ -44,19 +49,23 @@ const Home: React.FC = () => {
                     {
                         label: 'Óbitos/COVID',
                         quantity: 1,
-                        description: 'lorem',
+                        color: '#C62128',
+                        description: 'lorem'
                     },{
                         label: 'Internados',
                         quantity: 4,
-                        description: 'lorem',
+                        color: '#C62128',
+                        description: 'lorem'
                     },{
                         label: 'Em acompanhamento',
                         quantity: 46,
-                        description: 'lorem',
+                        color: '#C62128',
+                        description: 'lorem'
                     },{
                         label: 'Curados',
                         quantity: 27,
-                        description: 'lorem',
+                        color: '#C62128',
+                        description: 'lorem'
                     }
                 ]
             },{
