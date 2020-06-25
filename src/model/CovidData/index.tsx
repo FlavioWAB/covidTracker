@@ -1,9 +1,12 @@
+import { ReactChildren } from "react";
+
 export interface ICovidGroup {
     label: string;
     quantity: number;
     description: string;
     color: string;
     children?: ICovidGroup[];
+    lastUpdated?: string;
 }
 
 export interface ICovidOccupation {
@@ -24,4 +27,8 @@ export interface IItemImage {
 
 export interface ITrackerQuantity {
     color: string;
+}
+
+export interface IHomeBanner {
+    date: string;
 }
